@@ -95,3 +95,7 @@ wanted it.
      works on the command line but not in emacs, apparently some sort of config
      file needs to be generated.  Will try and follow these
      [instructions](https://emacs.stackexchange.com/questions/55635/how-can-i-set-up-clang-format-in-emacs).
+   * Set up Authy (app from Twillio) for 2FA for Github.  A bit of a mess, but
+     mostly worked.  Need to figure out how to cache the token in the keychain
+     so I don't have to enter it every time I `git push`.
+
