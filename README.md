@@ -72,14 +72,14 @@ wanted it.
    the [Big Sur version
    v2.7.1](https://github.com/macports/macports-base/releases/download/v2.7.1/MacPorts-2.7.1-11-BigSur.pkg).
 
-*  Use MacPorts to [install emacs](http://ports.macports.org/port/emacs/), I
-   mostly use it command line mode.  It is installed in `/opt/local/bin/emacs`.
-   *  Enable packages in emacs (see [MELPA](
+* Use MacPorts to [install emacs](http://ports.macports.org/port/emacs/), I
+  mostly use it command line mode.  It is installed in `/opt/local/bin/emacs`.
+  *  Enable packages in emacs (see [MELPA](
       http://melpa.org/#/getting-started)), make sure to enable normal and
       stable versions; if only stable is enabled you will not see many packages
-   * Install [markdown mode](http://jblevins.org/projects/markdown-mode/).
-   * Install a few color themes.
-   * Install the `clang-format` package so I can format C and C++ files.  It
+  * Install [markdown mode](http://jblevins.org/projects/markdown-mode/).
+  * Install a few color themes.
+  * Install the `clang-format` package so I can format C and C++ files.  It
      didn't work right out of the box because it could not find the
      `clang-format` binary so I had to figure out how to get this.  Downloaded
      [clang
@@ -89,13 +89,22 @@ wanted it.
 	 ```
 	 sudo cp ~/Downloads/clang+llvm-12.0.0-x86_64-apple-darwin/bin/clang-format /opt/local/bin
 	 ```
-	 
 	 As expected, needed to approve running it in the `Security & Privacy`
      preferences.  TODO: this is still not fully functional, the formatting
      works on the command line but not in emacs, apparently some sort of config
      file needs to be generated.  Will try and follow these
      [instructions](https://emacs.stackexchange.com/questions/55635/how-can-i-set-up-clang-format-in-emacs).
-   * Set up Authy (app from Twillio) for 2FA for Github.  A bit of a mess, but
-     mostly worked.  Need to figure out how to cache the token in the keychain
-     so I don't have to enter it every time I `git push`.
+  * Set up Authy (app from Twillio) for 2FA for Github.  A bit of a mess, but
+    mostly worked.  Need to figure out how to cache the token in the keychain so
+    I don't have to enter it every time I `git push`.
+
+* Install the [GitHub gh CLI](https://cli.github.com/).  This is not necessary
+  if you want to use git
+  *  `brew install gh` to install
+  *  `gh auth login` after installation; might have to update the
+     `~/.ssh/known_hosts` to the [GitHub's SSH key
+     fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
+     and generate the required classic authentication token if you don't have
+     one already (see the complete instructions on [Testing your SSH
+     connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)).
 
